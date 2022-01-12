@@ -125,52 +125,60 @@ if(oxi==1)
      else
      cout<<"We recommend you to take vaccination dose as soon as possble "<<endl;
      
-     if(oxi==1)
+     if(oxi==1 && ans[3]<90)
      {
-     	if(ans[3]<90)
+     	
      	cout<<"You should talk to any medical Professional as your Oxygen level is low"<<endl;
      	exit(0);
+		
      }
-     
+
+   else
+     {
      
      	if(okay==0)
      	{
      		cout<<"You should see a doctor as soon as possible and have covid Test ";
      		
      	}
-     	if(okay==1)
+     	
+     	else if(okay==1)
      	{
      		cout<<"You should see a doctor as soon as possible "<<endl; 
      	}
-     	if(okay==2)
+     	
+     	else if(okay==2)
      	{
      		cout<<"It may be a viral fever ..... You can take some Medicine prscribed by the medical professional"<<endl;
      	}
-     	if(okay==3)
+     	
+     	else if(okay==3)
      	{
      		if(ans[0]==1)
      		{
      			cout<<"As you described you have some breathing problem , Please contact you family dcotor if it gets worse"<<endl;
      		}
-     		if(ans[2]==1)
+     		else if(ans[2]==1)
      		{
      			cout<<"As you decribed you have lung disease , Pls take your prescribed medicines regularly"<<endl;
      		}
-     		if(ans[1]==1)
+     		else if(ans[1]==1)
      		{
      			cout<<"As you decribed you have  chest infection , You should see a doctor for general test"<<endl;
      		}
-     		if(ans[3]>=90)
+     		else if(ans[3]>=90)
      		{
      			cout<<"Nothing to worry "<<endl;
      		}
      		
+     		
+     		
      	}
-     	if(okay==4)
+     	else 
      	{
      	    cout<<"No problem at all"<<endl;
      	}
-     
+ }
 	
 	getch();
 	
