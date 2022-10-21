@@ -1,0 +1,4 @@
+This project mainly focuses on giving a rough estimation to whether a person is in trap of coronavirus or not. 
+This project basically collects some basic personal information from the user such as the name and the age of the person. 
+It also ask user to enter the answers to some simple answer to the question related to some basic parameters relatd to COVID-19 such as breathing problem, lung problem, heart problems, etc.
+After calculation to these parameters if a person falls within a certain range he/she might be directed about the problem accordingly. 
