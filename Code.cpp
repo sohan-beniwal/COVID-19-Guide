@@ -1,21 +1,30 @@
 #include<iostream>
 #include<conio.h>
 #include<stdlib.h>
+
 using namespace std;
 
 int main()
 {
 	int ans[10],i,age,oxi=0,okay=0,notokay=0;
 	char name[10],reply;
+	char lastname[10];
 	cout<<"Welcome to Coronavirus Self-Checker"<<endl;
-	cout<<"Enter Your Name "<<endl;
+	cout<<"Enter Your First Name "<<endl;
 	cin>>name;
-	cout<<"Hello!! "<<name<<endl;
+	cout<<"Enter Your Last Name "<<endl;
+	cin>>lastname;
+	cout<<"Hello!! "<<name<<" "<<lastname<<endl;
 	cout<<"Enter your Age"<<endl;
 	cin>>age;
 	cout<<"Please answer the following questions honestly "<<endl;
 	cout<<"Enter Y for yes and N for no "<<endl;
-breath:	
+	
+fiver:
+    cout<<"Are you suffering from fiver "<<endl;
+    cin>>reply;
+        
+breath:
 	cout<<"Do you have Breathing Problem "<<endl;
 	cin>>reply;
 	if(reply =='y' || reply == 'Y')
@@ -34,7 +43,7 @@ breath:
 		goto breath;
 	    }
 	}
-lung:	
+lung:
 	cout<<"Do you have any lung Infection "<<endl;
 	cin>>reply;
 	if(reply =='y' || reply == 'Y')
@@ -53,7 +62,7 @@ lung:
 		goto lung;
 	    }
 	}
-heart:	
+heart:
 	cout<<"Do you have any heart problem "<<endl;
 	cin>>reply;
 	if(reply =='y' || reply == 'Y')
@@ -71,9 +80,9 @@ heart:
 		cout<<"Pls enter valid input"<<endl;
 		goto heart;
 	    }
-	}	
+	}
 
-oximeter:	
+oximeter:
 	cout<<"Do you have oximeter "<<endl;
 	cin>>reply;
 	if(reply =='y' || reply == 'Y')
@@ -82,8 +91,10 @@ oximeter:
 		oxi=1;
 		cin>>ans[3];
 	}
-	
-vaccination:	
+	else
+        cout<<"Please get an oximeter ";
+
+vaccination:
 	cout<<"Are you fully vaccinated ? "<<endl;
 	cin>>reply;
 	if(reply =='y' || reply == 'Y')
@@ -101,8 +112,8 @@ vaccination:
 		cout<<"Pls enter valid input"<<endl;
 		goto vaccination;
      	}
-	}	
-	
+	}
+
 	for(i=0;i<=2;i++)
 	{
 		if(ans[i]==0)
@@ -110,48 +121,48 @@ vaccination:
 		else
 		notokay++;
 	}
-	
+
 if(oxi==1)
 {
 	if(ans[3]>90)
 	okay++;
 	if(ans[3]<90)
 	notokay++;
-    
+
 }
 
      if(ans[4]==1)
      okay++;
      else
      cout<<"We recommend you to take vaccination dose as soon as possble "<<endl;
-     
+
      if(oxi==1 && ans[3]<90)
      {
-     	
+
      	cout<<"You should talk to any medical Professional as your Oxygen level is low"<<endl;
      	exit(0);
-		
+
      }
 
    else
      {
-     
+
      	if(okay==0)
      	{
      		cout<<"You should see a doctor as soon as possible and have covid Test ";
-     		
+
      	}
-     	
+
      	else if(okay==1)
      	{
-     		cout<<"You should see a doctor as soon as possible "<<endl; 
+     		cout<<"You should see a doctor as soon as possible "<<endl;
      	}
-     	
+
      	else if(okay==2)
      	{
      		cout<<"It may be a viral fever ..... You can take some Medicine prscribed by the medical professional"<<endl;
      	}
-     	
+
      	else if(okay==3)
      	{
      		if(ans[0]==1)
@@ -170,18 +181,18 @@ if(oxi==1)
      		{
      			cout<<"Nothing to worry "<<endl;
      		}
-     		
-     		
-     		
+
+
+
      	}
-     	else 
+     	else
      	{
      	    cout<<"No problem at all"<<endl;
      	}
  }
-	
+
 	getch();
-	
-	
-	
+
+
+
 }
